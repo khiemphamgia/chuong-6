@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Vitae</title>
+    <style>
+        /* Reset margin và padding mặc định */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Container cho CV */
+        .cv-container {
+            width: 80%;
+            max-width: 1000px;
+            margin: 40px auto;
+            font-family: 'Arial', sans-serif;
+            background: #f4f7fa;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Header */
+        .cv-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .personal-info {
+            flex: 1;
+            color: #333;
+        }
+
+        .personal-info h1 {
+            font-size: 30px;
+            color: #2c3e50;
+        }
+
+        .personal-info p {
+            font-size: 16px;
+            margin: 5px 0;
+        }
+
+        .profile-picture img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #3498db;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Mục Tiêu Nghề Nghiệp */
+        .career-goal h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #3498db;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+        }
+
+        .career-goal p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        /* Kinh Nghiệm Làm Việc */
+        .work-experience h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #3498db;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+        }
+
+        .job h3 {
+            font-size: 20px;
+            color: #2c3e50;
+            margin-top: 10px;
+        }
+
+        .job ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            font-size: 16px;
+            color: #555;
+        }
+
+        .job li {
+            margin: 5px 0;
+        }
+
+        /* Học Vấn */
+        .education h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #3498db;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+        }
+
+        .degree h3 {
+            font-size: 20px;
+            color: #2c3e50;
+        }
+
+        .degree p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        /* Kỹ Năng */
+        .skills h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #3498db;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+        }
+
+        .skills ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .skills li {
+            font-size: 16px;
+            color: #555;
+            margin: 5px 0;
+            position: relative;
+        }
+
+        .skills li:before {
+            content: '✓';
+            color: #3498db;
+            position: absolute;
+            left: -20px;
+            font-size: 20px;
+        }
+
+        /* Hover Effect */
+        .job h3:hover, .degree h3:hover, .skills li:hover {
+            color: #3498db;
+            cursor: pointer;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .cv-container {
+                width: 90%;
+                padding: 20px;
+            }
+
+            .cv-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .profile-picture {
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cv-container">
+        <!-- Header -->
+        <header class="cv-header">
+            <div class="personal-info">
+                <h1>Nguyễn Văn A</h1>
+                <p>Email: nguyen.vana@email.com</p>
+                <p>Phone: 090-1234-5678</p>
+                <p>Địa chỉ: 123 Đường ABC, TP.HCM</p>
+            </div>
+            <div class="profile-picture">
+                <img src="avatar.jpg" alt="Ảnh đại diện">
+            </div>
+        </header>
+
+        <!-- Mục tiêu nghề nghiệp -->
+        <section class="career-goal">
+            <h2>Mục Tiêu Nghề Nghiệp</h2>
+            <p>Tìm kiếm một công việc trong lĩnh vực phát triển phần mềm, nơi tôi có thể áp dụng kỹ năng lập trình và giải quyết vấn đề để đóng góp vào sự phát triển của công ty.</p>
+        </section>
+
+        <!-- Kinh nghiệm làm việc -->
+        <section class="work-experience">
+            <h2>Kinh Nghiệm Làm Việc</h2>
+            <div class="job">
+                <h3>Nhà phát triển phần mềm - Công ty XYZ</h3>
+                <p><strong>Thời gian:</strong> 2020 - Nay</p>
+                <ul>
+                    <li>Phát triển các ứng dụng web và ứng dụng di động sử dụng JavaScript và React.</li>
+                    <li>Làm việc với nhóm phát triển để xây dựng các tính năng mới và cải thiện hiệu suất ứng dụng.</li>
+                    <li>Thực hiện kiểm thử và debug ứng dụng để đảm bảo chất lượng sản phẩm.</li>
+                </ul>
+            </div>
+            <div class="job">
+                <h3>Thực tập sinh lập trình - Công ty ABC</h3>
+                <p><strong>Thời gian:</strong> 2019 - 2020</p>
+                <ul>
+                    <li>Hỗ trợ phát triển các ứng dụng web với HTML, CSS và JavaScript.</li>
+                    <li>Tham gia vào các cuộc họp dự án và hỗ trợ sửa lỗi phần mềm.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Học vấn -->
+        <section class="education">
+            <h2>Học Vấn</h2>
+            <div class="degree">
+                <h3>Cử nhân Công Nghệ Thông Tin</h3>
+                <p><strong>Trường Đại Học ABC</strong> - 2015 - 2019</p>
+            </div>
+        </section>
+
+        <!-- Kỹ năng -->
+        <section class="skills">
+            <h2>Kỹ Năng</h2>
+            <ul>
+                <li>JavaScript, HTML, CSS</li>
+                <li>React, Node.js</li>
+                <li>SQL, MongoDB</li>
+                <li>Git, GitHub</li>
+                <li>Khả năng làm việc nhóm và giao tiếp tốt</li>
+            </ul>
+        </section>
+    </div>
+</body>
+</html>

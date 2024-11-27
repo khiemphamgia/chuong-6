@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hồ cá động</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #87CEEB;
+            overflow: hidden;
+        }
+
+        .aquarium {
+            position: relative;
+            width: 800px;
+            height: 400px;
+            background-color: #1E90FF;
+            border: 5px solid #fff;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .aquarium img {
+            position: absolute;
+            width: 60px;
+            height: auto;
+        }
+
+        .shark {
+            content: url('https://i.imgur.com/qwv0RxY.png'); /* Hình cá mập */
+        }
+
+        .diver {
+            content: url('https://i.imgur.com/hc2bMtc.png'); /* Hình thợ lặn */
+        }
+
+        .turtle {
+            content: url('https://i.imgur.com/E6eJfEw.png'); /* Hình rùa biển */
+        }
+
+        .fish {
+            content: url('https://i.imgur.com/XNPLfwF.png'); /* Hình cá nhỏ */
+        }
+    </style>
+</head>
+<body>
+    <div class="aquarium">
+        <img src="" alt="Shark" class="shark">
+        <img src="" alt="Diver" class="diver">
+        <img src="" alt="Turtle" class="turtle">
+        <img src="" alt="Fish" class="fish">
+    </div>
+    <script>
+        function moveObject(selector, speedX, speedY) {
+            const element = document.querySelector(selector);
+            let posX = Math.random() * 700;
+            let posY = Math.random() * 300;
+            let directionX = 1;
+            let directionY = 1;
+
+            function animate() {
+                posX += speedX * directionX;
+                posY += speedY * directionY;
+
+                if (posX <= 0 || posX >= 750) directionX *= -1;
+                if (posY <= 0 || posY >= 350) directionY *= -1;
+
+                element.style.left = posX + 'px';
+                element.style.top = posY + 'px';
+
+                requestAnimationFrame(animate);
+            }
+
+            animate();
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            moveObject('.shark', 2, 1);
+            moveObject('.diver', 1, 1.5);
+            moveObject('.turtle', 1.5, 1);
+            moveObject('.fish', 2, 2);
+        });
+    </script>
+</body>
+</html>
